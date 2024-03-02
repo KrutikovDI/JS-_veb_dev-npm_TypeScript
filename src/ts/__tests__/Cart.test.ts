@@ -35,5 +35,6 @@ test ('Удалим товар из списка', () => {
   cart.add({id: 1, name: 'Apple', price: 100});
   cart.add({id: 2, name: 'Banana', price: 200});
   cart.add({id: 3, name: 'Mango', price: 300});
-  expect(cart.removeProduct(2)).toBe(2);
+  cart.removeProduct(2)
+  expect(cart.items.length).toBe(2);
 })
